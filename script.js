@@ -66,7 +66,9 @@ let drawBars = () => {
     .attr("id", "tooltip")
     .style("visibility", "hidden")
     .style("width", "auto")
-    .style("height", "auto");
+    .style("height", "auto")
+    .style("position", "absolute");
+
   //create rectangle
   svg
     .selectAll("rect")
@@ -90,10 +92,13 @@ let drawBars = () => {
     .attr("y", (item) => {
       return height - padding - heightScale(item[1]);
     })
-    .on("mouseover", (item) => {
+    .on("mouseover", (item, index) => {
       tooltip.transition().style("visibility", "visible");
 
       tooltip.text(item[0]); //work only with d3 version 5 script cdn
+
+      tooltip.style("top", height - heightScale(item[1]) + "px");
+      tooltip.style("left", xScale(index) - 100 + "px");
 
       document.querySelector("#tooltip").setAttribute("data-date", item[0]);
     })

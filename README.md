@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a bar chart app showing the USA Gross Domestic Product (gdp) evolution.I used D3.js library to set a svg canvas. Inside the svg I created multiple function to generate scale, draw Bars and axis.
+This is a bar chart app showing the USA Gross Domestic Product (gdp) evolution.I used D3.js library to set a svg canvas. Inside the svg I created multiple function to generate scale, draw Bars representing gdp data and axis.
 
 ## Stack
 
