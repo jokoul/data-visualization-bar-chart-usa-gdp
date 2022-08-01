@@ -61,7 +61,7 @@ let generateScales = () => {
 let drawBars = () => {
   //create tooltip
   let tooltip = d3
-    .select("body")
+    .select(".wrapper")
     .append("div")
     .attr("id", "tooltip")
     .style("visibility", "hidden")
@@ -95,9 +95,9 @@ let drawBars = () => {
     .on("mouseover", (item, index) => {
       tooltip.transition().style("visibility", "visible");
 
-      tooltip.text(item[0]); //work only with d3 version 5 script cdn
+      tooltip.text(item[0] + " - " + item[1]); //work only with d3 version 5 script cdn
 
-      tooltip.style("top", height - heightScale(item[1]) + "px");
+      tooltip.style("top", height - heightScale(item[1]) - 80 + "px");
       tooltip.style("left", xScale(index) - 100 + "px");
 
       document.querySelector("#tooltip").setAttribute("data-date", item[0]);
