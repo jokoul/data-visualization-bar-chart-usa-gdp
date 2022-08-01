@@ -9,3 +9,5 @@ This is a bar chart app showing the USA Gross Domestic Product (gdp) evolution.I
 D3.js, HTML, CSS
 
 ## Launch
+
+https://jokoul.github.io/project-42-data-visualization-bar-chart/
