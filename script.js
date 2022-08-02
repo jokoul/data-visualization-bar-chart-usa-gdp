@@ -43,6 +43,7 @@ let generateScales = () => {
   let datesArray = values.map((item) => {
     return new Date(item[0]);
   });
+  console.log(datesArray);
   xAxisScale = d3
     .scaleTime()
     .domain([d3.min(datesArray), d3.max(datesArray)])
